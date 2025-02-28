@@ -1,4 +1,4 @@
-pipeline {
+\pipeline {
     agent any
     environment {
         DOCKER_IMAGE = 'naman906/calculator:latest'
@@ -47,7 +47,7 @@ pipeline {
             steps {
                 script {
                     echo "Running Ansible Playbook for deployment..."
-                    sh "ansible-playbook -i hosts deploy.yml"
+                    sh "export LC_ALL=en_US.UTF-8 && export LANG=en_US.UTF-8 && ansible-playbook -i hosts deploy.yml"
                 }
             }
         }
