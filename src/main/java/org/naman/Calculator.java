@@ -49,7 +49,7 @@ public class Calculator {
                     sc.close();
                     return;
                 default:
-                    System.out.println("Wrong choice. Please enter a valid number");
+                    System.out.println("Wrong choice. Please enter a, valid number");
             }
         }
     }
