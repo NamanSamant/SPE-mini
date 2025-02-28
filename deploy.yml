@@ -16,5 +16,5 @@
       ignore_errors: yes
 
     - name: Run new Docker container
-      command: docker run -d --name mini -p 9090:8080 naman906/calculator:latest
+      command: docker run -dit --name mini -p 9090:8080 naman906/calculator:latest
 
