@@ -43,6 +43,11 @@ pipeline {
                 }
             }
         }
+	stage('Deploy with Ansible') {
+            steps {
+                sh "ansible-playbook -i hosts deploy.yml"
+            }
+        }
     }
     post {
         failure {

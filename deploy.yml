@@ -1,0 +1,20 @@
+---
+- name: Deploy Docker Container on Localhost
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Ensure Docker is running
+      service:
+        name: docker
+        state: started
+
+    - name: Pull latest Docker image
+      command: docker pull naman906/calculator:latest
+
+    - name: Stop and remove existing container
+      command: docker rm -f mini
+      ignore_errors: yes
+
+    - name: Run new Docker container
+      command: docker run -d --name mini -p 9090:8080 naman906/calculator:latest
+
