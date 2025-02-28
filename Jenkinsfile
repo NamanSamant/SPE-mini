@@ -39,7 +39,7 @@ pipeline {
         stage('Run New Container') {
             steps {
                 script {
-                    sh 'docker run -it --name mini -p 9090:8080 naman906/calculator:latest'
+                    sh 'docker run -i --name mini -p 9090:8080 naman906/calculator:latest'
                 }
             }
         }
