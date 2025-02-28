@@ -12,6 +12,14 @@ pipeline {
                 }
             }
         }
+        stage('Run Tests') {
+            steps {
+                script {
+                    echo "Running unit tests..."
+                    sh 'mvn test -Dtest=org.naman.CalculatorTest'
+                }
+            }
+        }
         stage('Login to Docker Hub') {
             steps {
                 script {
@@ -39,7 +47,7 @@ pipeline {
         stage('Run New Container') {
             steps {
                 script {
-                    sh 'docker run -d --name mini -p 9090:8080 naman906/calculator:latest'
+                    sh "docker run -d --name mini -p 9090:8080 ${DOCKER_IMAGE}"
                 }
             }
         }
