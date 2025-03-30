@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Calculator {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        // Comment to check automatic build
         while (true) {
             System.out.print("\n");
             System.out.println("Scientific Calculator Menu:");
