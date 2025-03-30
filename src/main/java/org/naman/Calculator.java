@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Calculator {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        // check
+        // check 1
         while (true) {
             System.out.print("\n");
             System.out.println("Scientific Calculator Menu:");
